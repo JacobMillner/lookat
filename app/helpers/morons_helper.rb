@@ -1,0 +1,2 @@
+module MoronsHelper
+end

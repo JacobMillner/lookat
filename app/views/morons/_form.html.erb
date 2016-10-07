@@ -1,0 +1,25 @@
+<%= form_for(@moron) do |f| %>
+  <% if @moron.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@moron.errors.count, "error") %> prohibited this moron from being saved:</h2>
+
+      <ul>
+      <% @moron.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :imgur %><br>
+    <%= f.text_field :imgur %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

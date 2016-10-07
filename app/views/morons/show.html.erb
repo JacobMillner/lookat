@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Imgur:</strong>
+  <%= @moron.imgur %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @moron.description %>
+</p>
+
+<%= link_to 'Edit', edit_moron_path(@moron) %> |
+<%= link_to 'Back', morons_path %>

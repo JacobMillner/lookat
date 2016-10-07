@@ -1,0 +1,1 @@
+json.array! @morons, partial: 'morons/moron', as: :moron
