@@ -1,9 +1,20 @@
-<center><h1>Look at this Moron.</h1></center>
+<div class="col-xs-12"><center><h1>Look at this Moron.</h1></center></div>
 <% if @moron != nil %>
+
   <p>
     <center><h2><%= @moron.description %></h2></center>
   </p>
-  <p>
-    <center><%= image_tag @moron.imgur %></center>
-  </p>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+      <div class="hover ehover3">
+        <p>
+          <center>
+            <%= image_tag @moron.imgur, :class => "img-responsive", :width => 450, :height => 450, :crop => :limit %>
+          </center>
+        </p>
+      </div>
+    </div
+
 <% end %>
+<p>
+      <center><%= link_to 'Add one', morons_path %></center>
+      </p>
