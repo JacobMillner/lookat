@@ -3,6 +3,10 @@ require 'test_helper'
 class MoronsControllerTest < ActionController::TestCase
   setup do
     @moron = morons(:one)
+    @update = {
+      imgur:   'http://i.imgur.com/lsoomRq.jpg',
+      description: 'Look at this little boss.'
+    }
   end
 
   test "should get index" do
@@ -18,7 +22,7 @@ class MoronsControllerTest < ActionController::TestCase
 
   test "should create moron" do
     assert_difference('Moron.count') do
-      post :create, moron: { description: @moron.description, imgur: @moron.imgur }
+      post :create, moron: @update
     end
 
     assert_redirected_to moron_path(assigns(:moron))
@@ -35,7 +39,7 @@ class MoronsControllerTest < ActionController::TestCase
   end
 
   test "should update moron" do
-    patch :update, id: @moron, moron: { description: @moron.description, imgur: @moron.imgur }
+    patch :update, id: @moron, moron: @update
     assert_redirected_to moron_path(assigns(:moron))
   end
 
