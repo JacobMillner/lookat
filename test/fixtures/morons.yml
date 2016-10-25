@@ -7,3 +7,10 @@ one:
 two:
   imgur: MyString
   description: MyString
+
+goog:
+  imgur:
+    www.xyz.com/a/b/c/d.jpg
+  description:
+    My really cool website logo that
+    I made while sitting on my couch.
